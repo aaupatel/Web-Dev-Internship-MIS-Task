@@ -1,0 +1,67 @@
+I Searched this website...
+Website: Mussoorie International School
+And measured load speed using Google PageSpeed Insights...
+Performance Metrics:
+Largest Contentful Paint (LCP): 1.4 s
+Cumulative Layout Shift (CLS): 0.46
+First Contentful Paint (FCP): 1.1 s
+Time to First Byte (TTFB): 0.4 s
+Opportunities for Improvement:
+Eliminate render-blocking resources:
+
+Opportunity: Eliminate render-blocking resources to save 5.91s.
+How: Implement asynchronous loading of non-critical CSS and defer non-essential JavaScript.
+Reduce unused JavaScript:
+
+Opportunity: Reduce unused JavaScript to save 1.09s.
+How: Identify and remove unnecessary JavaScript code.
+Properly size images:
+
+Opportunity: Properly size images to save 0.91s.
+How: Resize and compress images appropriately, implement lazy loading, and use responsive image attributes.
+Serve images in next-gen formats:
+
+Opportunity: Serve images in next-gen formats to save 0.37s.
+How: Optimize images and use modern image formats like WebP.
+Efficiently encode images:
+
+Opportunity: Efficiently encode images to save 0.18s.
+How: Optimize image encoding for faster loading.
+1. Eliminate Render-Blocking Resources:
+html:
+<!-- Include your JavaScript at the end of the body tag to avoid render-blocking -->
+<body>
+   <!-- Resize and compress images appropriately -->
+   <img loading="lazy" src="https://www.misindia.net/images/40yr.jpg" alt="Description" width="300" height="200">
+
+   <!-- Implement lazy loading for images below the fold -->
+   <img loading="lazy" src="below-fold-image.jpg" alt="Below Fold Image">
+
+   <!-- Use responsive image attributes -->
+   <img loading="lazy" srcset="your-image.jpg 1x, your-image@2x.jpg 2x" alt="Responsive Image">
+   
+   <!-- Defer non-essential JavaScript loading -->
+   <script defer src="non-essential.js"></script>
+</body>
+
+// Set cache-control headers for static assets (JavaScript solution)
+document.addEventListener('DOMContentLoaded', function() {
+    const cssFile = document.createElement('link');
+    cssFile.rel = 'stylesheet';
+    cssFile.href = 'combined.min.css';
+    document.head.appendChild(cssFile);
+});
+2. Reduce Unused JavaScript:
+Identify and remove unnecessary JavaScript code.
+3. Properly Size Images:
+Resize and compress images appropriately.
+Implement lazy loading for images below the fold.
+Use responsive image attributes.
+4. Serve Images in Next-Gen Formats:
+Optimize images.
+Use modern image formats like WebP.
+5. Efficiently Encode Images:
+Optimize image encoding for faster loading.
+
+Summary:
+In conclusion, addressing the identified opportunities for improvement in render-blocking resources, unused JavaScript, image sizing, and encoding will significantly enhance the pageload speed of the Mussoorie International School website. The suggested code snippets aim to optimize critical aspects of the webpage, fostering a smoother and more efficient user experience. These technical enhancements not only align with best practices for web development but also contribute to better Core Web Vitals scores, ensuring a more user-friendly and performant website.
